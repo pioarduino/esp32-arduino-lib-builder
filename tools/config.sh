@@ -16,11 +16,8 @@ if [ -z $AR_SOURCE_BRANCH ]; then
     AR_SOURCE_BRANCH="release/v4.0.x"
 fi
 
-if [ -z $AR_BRANCH ]; then
-    AR_BRANCH="release/v4.0.x"
-
 if [ -z "$AR_PR_TARGET_BRANCH" ]; then
-    AR_PR_TARGET_BRANCH="release/v4.0.x"
+    AR_PR_TARGET_BRANCH="arduino/idf61"
 fi
 
 if [ -z "$IDF_TARGET" ]; then
