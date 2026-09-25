@@ -11,6 +11,11 @@ if [ -z "$IDF_BRANCH" ]; then
     IDF_BRANCH="release/v6.1"
 fi
 
+# Arduino branch to use
+if [ -z $AR_SOURCE_BRANCH ]; then
+    AR_SOURCE_BRANCH="release/v4.0.x"
+fi
+
 if [ -z "$AR_PR_TARGET_BRANCH" ]; then
     AR_PR_TARGET_BRANCH="release/v4.0.x"
 fi
@@ -31,7 +36,7 @@ if [ -z "$CHIP_VARIANT" ]; then
 fi
 
 # Owner of the target ESP32 Arduino repository
-AR_USER="${GITHUB_REPOSITORY_OWNER:-espressif}"
+AR_USER="pioarduino"
 
 # The full name of the repository
 AR_REPO="$AR_USER/arduino-esp32"
